@@ -65,9 +65,9 @@ public class Main {
     public static double safeDivideWithCustomException(double a, double b) throws CustomDivideByZeroException {
         // TODO: handle divide by zero by throwing a CustomDivideByZeroException
         // TODO: Modify the custom exception to pass a,b to the constructor and store them in the exception (see CustomDivideByZeroException.java)
-        if (b != 0) {
+        if (b == 0) {
             throw new CustomDivideByZeroException(a, b);
-        }
-        return 0;
+       }
+        return a / b;
     }
 }
